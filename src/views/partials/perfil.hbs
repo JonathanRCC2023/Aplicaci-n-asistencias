@@ -1,0 +1,35 @@
+<div class="all-title-box">
+		<div class="container text-center">
+			<h1><span class="m_1">Bienvenido {{usuario._doc.Nombre}}</span></h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section lb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>{{usuario._doc.Nombre}}  {{usuario._doc.Apellido}}</h3>
+                    <p class="lead">Perfil asignado para docentes</p>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>Docente</h4>
+                        <h2>{{usuario.asignatura.Nombre}}</h2>
+                        <p>Docente de la Unidad Educativa "Santa Mariana de Jesús"</p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Leer mas</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="{{usuario._doc.photo}}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>		
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->

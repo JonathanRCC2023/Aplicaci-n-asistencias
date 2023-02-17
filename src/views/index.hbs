@@ -1,0 +1,179 @@
+<body class="host_version">
+
+    <!-- LOADER -->
+      <div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    
+    <!-- End header -->
+
+    <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel"
+        data-pause="hover" data-interval="false">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
+                    <div class="dtab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-right">
+                                    <div class="big-tagline">
+                                        <h2><strong>Determinante </strong> En los Procesos de Asignación Asistencia
+                                        </h2>
+                                        <p class="lead">Esta aplicación, crea un entorno más óptimo y cercano para el
+                                            proceso específico de Asistencia, entre el Docente y el Educando. </p>
+                                            {{!-- Boton de Ingreso Nuevo --}}
+                                        <ul class="nav navbar-nav navbar-right">
+                                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal"
+                                                data-target="#login"><span> Ingresar </span></a></li>
+                                        </ul>
+                                        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header tit-up">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Valida tus credenciales</h4>
+            </div>
+            <div class="modal-body customer-box">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li><a class="active" href="#LoginEst" data-toggle="tab">Estudiante</a></li>
+                    <li><a href="#LoginDoc" data-toggle="tab">Docente</a></li>
+                    <li><a href="#LoginRep" data-toggle="tab">Representante</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="LoginEst">
+                        <form role="form" class="form-horizontal" method='POST' action='/login'>
+                            <input id="xx" name="xx" type="hidden" value="estudiante">
+                            {{>login}}
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                        Submit
+                                    </button>
+                                    <a class="for-pwd" href="javascript:;">Forgot your password?</a>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="LoginDoc">
+                        <form role="form" class="form-horizontal" method='POST' action='/login'>
+                            <input id="xx" name="xx" type="hidden" value="docente">
+                            {{>login}}
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                        Submit
+                                    </button>
+                                    <a class="for-pwd" href="javascript:;">Forgot your password?</a>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="LoginRep">
+                        <form role="form" class="form-horizontal"  method='POST' action='/login'>
+                            <input id="xx" name="xx" type="hidden" value="representante">
+                            {{>login}}
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                        Submit
+                                    </button>
+                                    <a class="for-pwd" href="javascript:;">Forgot your password?</a>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                        {{!-- Fin del nuevo boton --}}
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        {{!-- <a class="hover-btn-new" href="about.html"><span>Conoce más </span></a>--}} 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+            <div class="carousel-item">
+                <div id="home" class="first-section" style="background-image:url('/images/slider-02.jpg');">
+                    <div class="dtab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-left">
+                                    <div class="big-tagline">
+                                        <h2 data-animation="animated zoomInRight">Ayuda, evitando la brecha tecnológica
+                                            <strong> Sistematizando y Mejorando el proceso. </strong></h2>
+                                        <p class="lead" data-animation="animated fadeInLeft">Nuestro sistema, permite un
+                                            acercacmiento más ameno y transparente, para nuestros Docentes y el
+                                            Educando. </p>
+                                        {{!-- <a class="hover-btn-new" href="contact.html"><span>Contáctanos </span></a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a class="hover-btn-new" href="about.html"><span>Conoce más </span></a> --}}
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+            <div class="carousel-item">
+                <div id="home" class="first-section" style="background-image:url('/images/slider-03.jpg');">
+                    <div class="dtab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-center">
+                                    <div class="big-tagline">
+                                        <h2 data-animation="animated zoomInRight"><strong>Sistematización </strong>
+                                            Registro de Asistencia </h2>
+                                        <p class="lead" data-animation="animated fadeInLeft">Nuestro sistema incluye:
+                                            <br> Registrar asistencia, modificar las mismas y justificarlas.
+                                            <br> Además, de brindar una tipografía estandarizada para observar el
+                                            detalle de asistencia.
+                                        </p>
+                                        {{!-- <a href="contact.html" class="hover-btn-new"><span>Contáctanos</span></a> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="about.html" class="hover-btn-new"><span>Conoce más</span></a>--}}
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+            <!-- Left Control -->
+            <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <!-- Right Control -->
+            <a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- División en bloques estéticos -->
+

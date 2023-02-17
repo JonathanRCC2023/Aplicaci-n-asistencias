@@ -1,0 +1,50 @@
+  	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>Salones de Clases <span class="m_1">Información detallada sobre las aulas o salones de clases. <br> Donde los estudiantes, construirán su conocimientos. </span></h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                </div>
+            </div><!-- end title -->
+
+            <hr class="invis"> 
+
+            <div class="row">
+                {{#each aulas}} 
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="course-item" style="padding-bottom: 2em;">
+						<div class="image-blo">
+							<img src='{{photo}}' alt="" class="img-fluid">
+						</div>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">{{Nombre}}</a></h2>
+							</div>
+							<div class="course-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+							<div class="course-rating">
+								<ul>
+								{{#each Id_Asignatura}}
+									<li><i>{{Nombre}}</i></li>
+								{{/each}}	
+								</ul>						
+							</div>
+						</div>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> {{Periodo}}</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> {{Num_estudiantes}}</li>
+							</ul>
+						</div>
+					</div>
+                </div><!-- end col -->	
+                {{/each}}
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->

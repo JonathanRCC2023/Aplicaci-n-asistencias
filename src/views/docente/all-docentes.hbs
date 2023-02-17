@@ -1,0 +1,40 @@
+<!-- LOADER -->
+<div id="preloader">
+    <div class="loader-container">
+        <div class="progress-br float shadow">
+            <div class="progress__item"></div>
+        </div>
+    </div>
+</div>
+<!-- END LOADER -->
+
+<div class="all-title-box">
+    <div class="container text-center">
+        <h1>Docentes<span class="m_1"></span></h1>
+    </div>
+</div>
+
+<div id="teachers" class="section wb">
+    <div class="container">
+        <div class="row">
+            {{#each docentes}}
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="our-team">
+                    <div class="team-img">
+                        <img src='{{Id_docente.photo}}'>
+                        <div class="social">
+                           
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">{{Id_docente.Nombre}} {{Id_docente.Apellido}}</h3>
+                        <span class="post">{{Nombre}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        <!-- end row -->
+        </div>
+    </div><!-- end container -->
+</div><!-- end section -->
+

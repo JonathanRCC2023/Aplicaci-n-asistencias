@@ -1,0 +1,75 @@
+<section id="banner"
+    style="background: url(../img/reserva.jpg) center center !important;background-size:contain !important">
+
+    <div class="section-title row text-center">
+        <div class="col-md-8 offset-md-2">
+            <h3>Registro de Asistencia</h3>
+        </div>
+    </div>
+
+    <div class="col-md-8 offset-md-4">
+        <span class="col-sm-12">Horas Dictadas: </span>
+        <input class="combo" type="number" name="horas" id="horas" min="1" max="2" step="1" readonly="readonly">
+        <span class="col-sm-12">Fecha: </span>
+        <input class="combo" type="date" name="fecha" id="fecha">
+        <input id="grado" name="grado" type="hidden" value="{{grado}}">
+        <input id="materia" name="materia" type="hidden" value="{{materia}}">
+    </div>
+    <br><br>
+    <section id="listAsis">
+         <div class="container" style="color: rgb(0, 0, 0) !important; width:50em !important">
+            <table class="table" id="myTable">
+            <thead>
+                <tr class="header">
+                    <th>Fecha</th>
+                    <th>Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each _asistenciaClean}}
+                <tr>
+                    <th>{{CreatedAt}}</th>
+                    <th>
+                        <input class="btn btn-outline-info" type="button" name="enviar" value="Buscar" href="javascript:;"
+                    onclick="buscar($('#grado').val(),$('#materia').val(),'{{CreatedAt}}');">
+                    </th>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+         </div>
+    </section>
+
+    <section hidden="hidden" id="detailAsistencia">
+        <div class="container" style="color: rgb(0, 0, 0) !important">
+            <table class="table" id="myTable">
+                <thead>
+                    <tr class="header">
+                        <th>Estudiante</th>
+                        <th>Asiste</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyAsis">
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {{#if docente}}
+        <div class="row">
+            <div class="col-md-4 offset-md-8">
+                <button type="submit" class="btn btn-outline-warning" href="javascript:;" onclick="back();"
+                    id="back" style="margin-right:20%;margin-bottom:10%">
+                    Volver
+                </button>
+                <button type="submit" class="btn btn-outline-warning" href="javascript:;" onclick="update();"
+                    id="update" style="margin-right:20%;margin-bottom:10%">
+                    Actualizar
+                </button>
+                
+            </div>
+        </div>
+        {{/if}}
+    </section>
+</section>

@@ -1,0 +1,53 @@
+<section id="banner"
+    style="background: url(../img/reserva.jpg) center center !important;background-size:contain !important">
+
+    <div class="section-title row text-center">
+        <div class="col-md-8 offset-md-2">
+            <h3>Registro de Asistencia</h3>
+        </div>
+    </div>
+    <form role="form" class="form-horizontal" method='POST' action='/asistencias/:id'>
+        <div class="col-md-8 offset-md-4">
+            <span class="col-sm-12">Horas Dictadas: </span>
+            <input class="combo" type="number" name="horas" min="1" max="2" step="1" value="1">
+                <span class="col-sm-12">Fecha: </span>
+                <input class="combo" type="date" name="fecha" value="{{fecha}}">
+            <input id={{grado}} name="grado" type="hidden" value={{grado}}>
+            <input id={{materia}} name="asignatura" type="hidden" value={{materia}}>
+        </div>
+        <br><br>
+        <div class="container" style="color: rgb(0, 0, 0) !important">
+            <table class="table" id="myTable">
+                <thead>
+                    <tr class="header">
+                        <th>Estudiante</th>
+                        <th>Asiste</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each student}}
+                    <tr>
+                        <input id={{_id}} name="id" type="hidden" value={{_id}}> 
+                        <td>{{Nombre}} {{Apellido}}</td>
+                        <td>
+                            <label class="col-sm-4">
+                                SI <input type="radio" name="{{_id}}" value="1">
+                            </label>
+                            <label class="col-sm-4">
+                                NO <input type="radio" name="{{_id}}" value="0">
+                            </label>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-9">
+                <button type="submit" class="btn btn-outline-warning" style="margin-right:20%;margin-bottom:10%">
+                    Guardar
+                </button>
+            </div>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,95 @@
+<body class="host_version"></body>
+<header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/images/logo.png" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host"
+                aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbars-host">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Principal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/docentes">Docentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aulas">Aulas</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="about.html">Acerca de Nosotros</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contáctanos</a></li> -->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="hover-btn-new log orange" href="#" data-toggle="modal"
+                            data-target="#login"><span>Ingresar</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header tit-up">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Ingresa y Valida tus credenciales</h4>
+            </div>
+            <div class="modal-body customer-box">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li><a class="active" href="#LoginEst" data-toggle="tab">Estudiante</a></li>
+                    <li><a href="#LoginDoc" data-toggle="tab">Docente</a></li>
+                    <li><a href="#LoginRep" data-toggle="tab">Representante Legal</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="LoginEst">
+                        <form role="form" class="form-horizontal" method='POST' action='/login'>
+                            <input id="xx" name="xx" type="hidden" value="estudiante">
+                            {{>login}}
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                        Acceder
+                                    </button>
+                                    <a class="for-pwd" href="javascript:;">Olvidaste tu constraseña?</a>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="LoginDoc">
+                        <form role="form" class="form-horizontal" method='POST' action='/login'>
+                            <input id="xx" name="xx" type="hidden" value="docente">
+                            {{>login}}
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                        Acceder
+                                    </button>
+                                    <a class="for-pwd" href="javascript:;">Olvidaste tu contraseña?</a>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="LoginRep">
+                        <form role="form" class="form-horizontal"  method='POST' action='/login'>
+                            <input id="xx" name="xx" type="hidden" value="representante">
+                            {{>login}}
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                        Acceder
+                                    </button>
+                                    <a class="for-pwd" href="javascript:;">Olvidaste tu contraseña?</a>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

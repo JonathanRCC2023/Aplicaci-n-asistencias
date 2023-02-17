@@ -1,0 +1,34 @@
+<div class="all-title-box">
+    <div class="container text-center">
+        <h1>Aulas <span class="m_1">Se permitira visualizar detalladamente las asistencias durante el periodo
+                lectivo en curso.</span></h1>
+    </div>
+</div>
+
+<div id="pricing-box" class="section wb">
+    <div class="container">
+        <div class="row">
+            {{#each grados}}
+            <div class="col-md-4 col-sm-6">
+                <div class="pricingTable">
+                    <div class="pricingTable-header">
+                        <span class="heading">
+                            <h3>{{Nombre}}</h3>
+                        </span>
+                        {{#each Id_Asignatura}}
+                        <span class="price-value"> {{Nombre}}<span class="month"></span> <span>
+                        <span class="price-value"> {{Id_docente.Nombre}}<span class="month"></span> <span>
+                        {{/each}}
+                    </div>
+
+                    <div class="pricingTable-sign-up">
+                        <a href="/registroAsistencia/{{_id}}" class="btn btn-outline-dark"><span>Asistencia</span></a>
+                        <a href="/asistencias/{{_id}}" class="btn btn-outline-dark"><span>Ver registros</span></a>
+                    </div>
+                    
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

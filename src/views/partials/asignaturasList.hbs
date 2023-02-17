@@ -1,0 +1,58 @@
+<section id="banner"
+    style="background: url(../img/reserva.jpg) center center !important;background-size:contain !important">
+
+    <div class="section-title row text-center">
+        <div class="col-md-8 offset-md-2">
+            <br><br>
+            <h2><strong>Unidad Educativa Particular 'Santa Mariana de Jesus'</strong></h2>
+            <h2>{{usuario.0.Id_Estudiante.Nombre}} {{usuario.0.Id_Estudiante.Apellido}}</h2>
+            <h2>{{usuario.0.Id_Estudiante.Id_Grado.Nombre}}</h2>
+        </div>
+    </div>
+    <div class="container" style="color: rgb(0, 0, 0) !important">
+        <table class="table" id="myTable">
+            <thead>
+                <tr class="header">
+                    <th>Materia</th>
+                    <th>Docente</th>
+                    <th>Horas Planificadas</th>
+                    <th>Horas Dictadas</th>
+                    <th>Horas Asistidas</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each usuario}}
+                <tr>
+                    <td>{{Id_Asignatura.Nombre}}</td>
+                    <td>{{Id_Asignatura.Id_docente.Nombre}} {{Id_Asignatura.Id_docente.Apellido}}</td>
+                    <td>{{Id_Asignatura.HorasPlanificadas}}</td>
+                    <td>{{Id_Asignatura.HorasDictadas}}</td>
+                    <td>{{Asistidas}}
+                        <button type="submit" class="btn btn-outline-info" style="margin-left: 50% !important;"
+                            href="javascript:;" onclick="details({{Id_Asignatura._id}});" id="detailsBtn">
+                            Detalle
+                        </button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section hidden="hidden" id="detailsSection">
+    <div class="container" style="overflow:scroll">
+        <table class="table" id="myTable">
+            <thead>
+                <tr class="header">
+                    <th>Fecha</th>
+                    <th>Horas Dictadas</th>
+                    <th>Asistencia</th>
+                </tr>
+            </thead>
+            <tbody id="bodyDetails">
+                
+            </tbody>
+        </table>
+    </div>
+</section>
